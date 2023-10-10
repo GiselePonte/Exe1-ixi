@@ -12,13 +12,12 @@ public class ComprimentoStringServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        // Recupere o valor do campo de entrada de texto
+      
         String entrada = request.getParameter("entrada");
 
-        // Calcule o comprimento da string inserida
+      
         int comprimento = entrada.length();
 
-        // Escreva a resposta HTML
         out.println("<html>");
         out.println("<head>");
         out.println("<title>Comprimento da String</title>");
@@ -28,7 +27,6 @@ public class ComprimentoStringServlet extends HttpServlet {
         out.println("<p>A string inserida foi: " + entrada + "</p>");
         out.println("<p>O comprimento da string é: " + comprimento + "</p>");
 
-        // Crie um novo campo de entrada de texto para o próximo valor
         out.println("<form action='/SeuProjeto/ComprimentoStringServlet' method='post'>");
         out.println("Insira uma nova string: <input type='text' name='entrada'>");
         out.println("<input type='submit' value='Calcular Comprimento'>");
