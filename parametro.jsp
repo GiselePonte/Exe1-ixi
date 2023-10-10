@@ -12,11 +12,11 @@ public class TabuadaServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        // Recupere o valor do parâmetro "numero" do formulário
+       
         String numeroStr = request.getParameter("numero");
 
         try {
-            // Converta o valor do parâmetro para um inteiro
+          
             int numero = Integer.parseInt(numeroStr);
 
             out.println("<html>");
