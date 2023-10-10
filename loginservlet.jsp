@@ -8,18 +8,17 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
-    private static final String USUARIO_AUTORIZADO = "seuUsuario"; // Nome de usuário autorizado
-    private static final String SENHA_AUTORIZADA = "suaSenha";    // Senha autorizada
+    private static final String USUARIO_AUTORIZADO = "seuUsuario"; 
+    private static final String SENHA_AUTORIZADA = "suaSenha";   
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        // Recupere o nome de login e a senha do formulário
+     
         String nome = request.getParameter("nome");
         String senha = request.getParameter("senha");
 
-        // Verifique se as credenciais correspondem às credenciais autorizadas
         if (nome.equals(USUARIO_AUTORIZADO) && senha.equals(SENHA_AUTORIZADA)) {
             out.println("<html>");
             out.println("<head>");
